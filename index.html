@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice LLM App</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px 50px;
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 450px;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 26px;
+    }
+
+    button {
+      background: #00c6ff;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(0, 198, 255, 0.6);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .status {
+      margin-top: 15px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    #output {
+      margin-top: 25px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 15px;
+      line-height: 1.5;
+      min-height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🎤 Voice AI Assistant</h1>
+
+    <button onclick="startListening()">Speak</button>
+
+    <div class="status" id="status">
+      Click "Speak" and start talking...
+    </div>
+
+    <p id="output"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
